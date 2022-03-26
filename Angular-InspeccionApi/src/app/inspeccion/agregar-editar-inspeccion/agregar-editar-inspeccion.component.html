@@ -1,0 +1,29 @@
+<!--HTML para Agregar o Editar una Inspección-->
+
+<!--Usamos Form-->
+<form>
+    <div class="mb-3">
+        <label for="tipoInspeccionId" class="form-label">Tipo de Inspección</label>
+        <input type="text" class="form-control" name="tipoInspeccionId" [(ngModel)]="tipoInspeccionId" *ngIf="inspeccion.id!=0" disabled>
+        <select class="form-control" name="tipoInspeccionId" id="tipoInspeccionId" [(ngModel)]="tipoInspeccionId" *ngIf="inspeccion.id==0">
+            <option *ngFor="let type of tipoInspeccionList$ | async" [value]="type.id">{{type.nombreInspeccion}}</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="estado" class="form-label">Estado</label>
+        <select class="form-control" name="estado" id="estado" [(ngModel)]="estado">
+            <option *ngFor="let estado of estadoList$ | async" [value]="estado.opcionEstado">{{estado.opcionEstado}}</option>
+        </select>
+    </div>
+    <div class="mb3">
+        <label for="comentarios" class="form-label">Comentarios</label>
+        <input type="text" class="form-control" [(ngModel)]="comentarios" name="comentarios">
+    </div>
+    <br>
+    <button (click)="agregarInspeccion()" *ngIf="inspeccion.id==0" class="btn btn-primary">
+        Agregar       
+    </button>
+    <button (click)="modificarInspeccion()" *ngIf="inspeccion.id!=0" class="btn btn-primary">
+        Modificar
+    </button>
+</form>

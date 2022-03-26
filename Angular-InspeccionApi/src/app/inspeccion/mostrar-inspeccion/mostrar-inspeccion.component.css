@@ -1,0 +1,38 @@
+/* Estilos personalizados de la página que muestra la Lista Inspecciones */
+
+#agregar-exito-alert,
+#modificar-exito-alert,
+#eliminar-exito-alert {
+    display: none;
+}
+
+#agregar-exito-alert,
+#modificar-exito-alert,
+#eliminar-exito-alert {
+    animation-name: fadeInAndOut;
+    animation-duration: 4s;
+}
+
+@-webkit-keyframes fadeInAndOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInAndOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

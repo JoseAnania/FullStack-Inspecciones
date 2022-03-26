@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "OTB+tLFd7GuocdkdRGmRO0jLVOfBaumvMlCc5NQKIVU=",
+  "Source": "InspeccionAPI",
+  "BasePath": "_content/InspeccionAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
